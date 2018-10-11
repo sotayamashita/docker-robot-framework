@@ -1,0 +1,10 @@
+#!/bin/bash
+
+main() {
+  docker run --rm -ti \
+    -v "$PWD/suites":/home/robot/suites   \
+    -v "$PWD/reports":/home/robot/reports \
+    "behivee:robot-framework"
+}
+
+main "$@"
